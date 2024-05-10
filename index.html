@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aletta Bookshelf</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="bagian_bar">
+    <h1 class="bagian_bar__title">Aletta Bookshelf </h1>
+    <p class="bagian_bar__desc">Sebuah web sederhana untuk inventaris buku yang ada di perpustakaan</p>
+  </header>
+  <main>
+
+    <!------------------ Bagian Masukkan Buku ------------------>
+    
+    <section class="input_section">
+      <div class="judul_kotak">
+        <h2>Masukkan Buku Baru</h2>
+      </div>
+      <div class="isi_kotak">
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputNamaPeminjam">Nama Peminjam</label>
+            <input id="inputBookPeminjam" type="text" required>
+          </div>
+          <div class="input">
+            <label for="inputBookTitle">Judul Buku</label>
+            <input id="inputBookTitle" type="text" required>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis Buku</label>
+            <input id="inputBookAuthor" type="text" required>
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun Terbit Buku</label>
+            <input id="inputBookYear" type="number" required>
+          </div>
+          <div class="input">
+            <label for="inputPengembalian">Tanggal Pengembalian</label>
+            <input id="inputBookPengembalian" type="date" required>
+          </div>
+          <div class="input_inline">
+            <input id="inputBookIsComplete" type="checkbox">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+          </div>
+          <button id="bookSubmit" type="submit">Kirim</button>
+        </form>
+        <div id="lateMessage"></div>
+      </div>
+    </section>
+    
+<!-------------------------- Selesai --------------------------->
+
+<!---------------------- Bagian Cari Buku ---------------------->
+
+    <section class="search_section">
+      <div class="judul_kotak">
+        <h2>Cari Buku</h2>
+      </div>
+      <div class="isi_kotak">
+        <p>Kata Kunci</p>
+        <form id="searchBook">
+          <input id="searchBookTitle" type="text">
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+      </div>
+    </section>
+
+<!-------------------------- Selesai --------------------------->
+
+<!-------------------- Bagian Belum Di Baca -------------------->
+
+    <section class="book_shelf">
+      <div class="judul_kotak">
+        <h2>Belum dibaca</h2>
+      </div>
+      <div class="isi_kotak">
+        <div id="incompleteBookshelfList" class="book_list"></div>
+      </div>
+    </section>
+
+<!-------------------------- Selesai --------------------------->
+
+<!------------------- Bagian Selesai Di Baca ------------------->
+
+    <section class="book_shelf">
+      <div class="judul_kotak">
+        <h2>Selesai dibaca</h2>
+      </div>
+      <div class="isi_kotak">
+        <div id="completeBookshelfList" class="book_list"></div>
+      </div>
+    </section>
+
+<!-------------------------- Selesai --------------------------->
+
+<!------------------ Bagian Tabel Pengembalian ------------------>
+
+    <section class="pengembalian_section">
+      <div class="judul_kotak">
+        <h2>Daftar Pengembalian</h2>
+      </div>
+      <div class="Tabel_Pengembalian">
+        <table id="pengembalianTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Judul Buku</th>
+              <th>Tanggal Peminjaman</th>
+              <th>Tanggal Pengembalian</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="pengembalianBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+<!-------------------------- Selesai --------------------------->
+
+ 
+
+  </main>
+  <footer>
+    <h3>Hak Cipta © 2023 Aletta Claudia</h3>
+  </footer>
+</body>
+</html>
